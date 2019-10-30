@@ -7,7 +7,6 @@ module.exports = class Buyer {
     registration_date,
     last_seen,
     location,
-    wishlist
   ) {
     this.firstname = firstname;
     this.lastname = lastname;
@@ -16,12 +15,13 @@ module.exports = class Buyer {
     this.last_seen = last_seen;
     this.registration_date = registration_date;
     this.location = location;
-    this.wishlist = [];
+  }
+  printLocation(){
+    console.log(this.location)
   }
   addToWishlist(pcbuild) {
       this.pcbuild = pcbuild.name
       pcbuild.interested_buyers.push(this)
-      wishlist.push(this)
   }
 
 };

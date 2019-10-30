@@ -1,5 +1,5 @@
 module.exports = class Pcbuild {
-    constructor(name,type,cpu, video_card, motherboard, memory,build_year, storage, drive, power_supply, pccase, price, interested_buyers ){
+    constructor(name,type,cpu, video_card, motherboard, memory,build_year, storage, drive, power_supply, pccase, price ){
         this.name = name
         this.type = type
         this.cpu = cpu
@@ -14,9 +14,9 @@ module.exports = class Pcbuild {
         this.price = price
         this.interested_buyers = []
     }
-    printBuyers(){
+    printBuyersName(){
         this.interested_buyers.forEach(printName)
     }
 }
 
-const printName = Buyer => console.log(Buyer.name)
+const printName = Buyer => console.log(Buyer.firstname)
